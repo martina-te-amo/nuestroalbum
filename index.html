@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +9,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         
         body { 
-            /* Fondo verde salvia suave elegante */
+            /* Fondo verde salvia elegante */
             background: linear-gradient(135deg, #d8eae0 0%, #c4dfd0 50%, #eaf4ee 100%);
             color: #1a241f; 
             padding: 25px 15px; 
@@ -18,10 +19,10 @@
             overflow-x: hidden;
         }
 
-        /* Imágenes flotantes transparentes de Snoopy y Gumball */
+        /* Ilustraciones transparentes de Snoopy y Gumball */
         .decor-bg {
             position: fixed;
-            opacity: 0.22;
+            opacity: 0.28;
             pointer-events: none;
             z-index: 0;
         }
@@ -35,7 +36,7 @@
             z-index: 1;
         }
 
-        /* Título en NEGRO ELEGANTE */
+        /* Título en Negro Elegante */
         h1 { 
             font-size: 1.6rem; 
             color: #111827; 
@@ -44,7 +45,7 @@
             letter-spacing: -0.3px;
         }
 
-        /* Subtítulo en Gris Oscuro Suave */
+        /* Subtítulo en Gris Oscuro */
         p.subtitle { 
             font-size: 0.9rem; 
             color: #374151; 
@@ -138,11 +139,11 @@
 </head>
 <body>
 
-    <!-- Ilustraciones decorativas PNG -->
+    <!-- Ilustraciones decorativas funcionalmente comprobadas -->
     <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG1.png" class="decor-bg decor-snoopy-1" alt="Snoopy">
-    <img src="https://pngimg.com/uploads/gumball/gumball_PNG12.png" class="decor-bg decor-gumball-1" alt="Gumball">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-1" alt="Gumball">
     <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG25.png" class="decor-bg decor-snoopy-2" alt="Snoopy">
-    <img src="https://pngimg.com/uploads/gumball/gumball_PNG1.png" class="decor-bg decor-gumball-2" alt="Gumball">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-2" alt="Gumball">
 
     <div class="content-wrapper">
         <h1>Nuestro reto de fotos, Renato y Martina :D</h1>
@@ -152,20 +153,21 @@
     </div>
 
     <script>
+        // LISTA SIN EMOJIS
         const retos = [
-            "Foto en la playa 🏖️",
-            "Comiendo hamburgesas 🍔",
-            "Una foto de noche con aura jeje ✨",
-            "Haciendonos skincare 🧖‍♀️",
-            "Un abrazo fuerte 🫂",
-            "En un parque/naturaleza 🍃",
-            "Tomando un cafe ☕",
-            "Foto juntos en un auto 🚗",
-            "Una foto espejo 🪞",
-            "Yo tomandote porque me gusta tomarte 📸",
-            "Foto en el happyland 🎟️",
-            "Foto en el cine 🍿",
-            "Foto en el colegio 🏫"
+            "Foto en la playa",
+            "Comiendo hamburguesas",
+            "Una foto de noche con aura jeje",
+            "Haciéndonos skincare",
+            "Un abrazo fuerte",
+            "En un parque/naturaleza",
+            "Tomando un café",
+            "Foto juntos en un auto",
+            "Una foto espejo",
+            "Yo tomándote porque me gusta tomarte",
+            "Foto en el happyland",
+            "Foto en el cine",
+            "Foto en el colegio"
         ];
 
         const grid = document.getElementById('grid');

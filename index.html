@@ -8,9 +8,9 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         
         body { 
-            /* Fondo con degradado donde el verde predomina mucho más */
-            background: linear-gradient(135deg, #e8f3ed 0%, #cce5d7 50%, #f9ecee 100%);
-            color: #2e3d36; 
+            /* Fondo verde salvia suave elegante */
+            background: linear-gradient(135deg, #d8eae0 0%, #c4dfd0 50%, #eaf4ee 100%);
+            color: #1a241f; 
             padding: 25px 15px; 
             text-align: center;
             min-height: 100vh;
@@ -18,37 +18,36 @@
             overflow-x: hidden;
         }
 
-        /* Imágenes flotantes transparentes de Snoopy y Gumball de fondo */
+        /* Imágenes flotantes transparentes de Snoopy y Gumball */
         .decor-bg {
             position: fixed;
-            opacity: 0.18;
+            opacity: 0.22;
             pointer-events: none;
             z-index: 0;
-            border-radius: 50%;
         }
-        .decor-snoopy-1 { top: 3%; left: -20px; width: 110px; }
-        .decor-gumball-1 { top: 22%; right: -15px; width: 100px; }
-        .decor-snoopy-2 { bottom: 25%; left: -15px; width: 100px; }
-        .decor-gumball-2 { bottom: 4%; right: -10px; width: 110px; }
+        .decor-snoopy-1 { top: 2%; left: -10px; width: 90px; }
+        .decor-gumball-1 { top: 20%; right: -10px; width: 85px; }
+        .decor-snoopy-2 { bottom: 20%; left: -10px; width: 85px; }
+        .decor-gumball-2 { bottom: 2%; right: -10px; width: 90px; }
 
         .content-wrapper {
             position: relative;
             z-index: 1;
         }
 
-        /* Título en rojo carmesí elegante (Tú) */
+        /* Título en NEGRO ELEGANTE */
         h1 { 
-            font-size: 1.7rem; 
-            color: #b83b49; 
+            font-size: 1.6rem; 
+            color: #111827; 
             margin-bottom: 6px; 
             font-weight: 700; 
             letter-spacing: -0.3px;
         }
 
-        /* Subtítulo actualizado */
+        /* Subtítulo en Gris Oscuro Suave */
         p.subtitle { 
             font-size: 0.9rem; 
-            color: #3b5247; 
+            color: #374151; 
             margin-bottom: 25px; 
             line-height: 1.4;
             padding: 0 10px;
@@ -63,9 +62,9 @@
             margin: 0 auto;
         }
 
-        /* Tarjetas con bordes punteados en tono verde suave */
+        /* Tarjetas estilo cristal con borde verde */
         .slot {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(8px);
             border: 1.5px dashed #8ebdaa;
             border-radius: 16px;
@@ -82,7 +81,7 @@
         .slot-title { 
             font-size: 0.85rem; 
             font-weight: 600; 
-            color: #2a3d34;
+            color: #1f2937;
             margin-bottom: 8px;
             line-height: 1.3;
         }
@@ -113,35 +112,37 @@
 
         .file-input { display: none; }
         
-        /* Botón Inicial: Rojo cálido elegante */
+        /* Botones en blanco con texto oscuro */
         .btn-upload {
-            background: linear-gradient(135deg, #d64554 0%, #b83b49 100%);
-            color: white;
+            background: #ffffff;
+            color: #111827;
             padding: 8px 12px;
             border-radius: 12px;
             font-size: 0.78rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            border: none;
+            border: 1px solid #e5e7eb;
             width: 100%;
-            box-shadow: 0 4px 10px rgba(184, 59, 73, 0.25);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
         }
 
-        /* Botón al cargar foto: Verde esmeralda vivo (Sus ojos) */
+        /* Botón al cargar foto: Verde esmeralda vivo */
         .btn-upload.loaded { 
             background: linear-gradient(135deg, #2e8b60 0%, #1e6343 100%);
+            color: #ffffff;
+            border: none;
             box-shadow: 0 4px 10px rgba(30, 99, 67, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <!-- Ilustraciones decorativas de fondo -->
-    <img src="https://upload.wikimedia.org/wikipedia/en/2/22/Snoopy_Peanuts.png" class="decor-bg decor-snoopy-1" alt="Snoopy">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-1" alt="Gumball">
-    <img src="https://upload.wikimedia.org/wikipedia/en/2/22/Snoopy_Peanuts.png" class="decor-bg decor-snoopy-2" alt="Snoopy">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-2" alt="Gumball">
+    <!-- Ilustraciones decorativas PNG -->
+    <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG1.png" class="decor-bg decor-snoopy-1" alt="Snoopy">
+    <img src="https://pngimg.com/uploads/gumball/gumball_PNG12.png" class="decor-bg decor-gumball-1" alt="Gumball">
+    <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG25.png" class="decor-bg decor-snoopy-2" alt="Snoopy">
+    <img src="https://pngimg.com/uploads/gumball/gumball_PNG1.png" class="decor-bg decor-gumball-2" alt="Gumball">
 
     <div class="content-wrapper">
         <h1>Nuestro reto de fotos, Renato y Martina :D</h1>

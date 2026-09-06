@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +8,6 @@ HTML
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         
         body { 
-            /* Fondo verde salvia elegante */
             background: linear-gradient(135deg, #d8eae0 0%, #c4dfd0 50%, #eaf4ee 100%);
             color: #1a241f; 
             padding: 25px 15px; 
@@ -19,7 +17,6 @@ HTML
             overflow-x: hidden;
         }
 
-        /* Ilustraciones transparentes de Snoopy y Gumball */
         .decor-bg {
             position: fixed;
             opacity: 0.28;
@@ -36,7 +33,6 @@ HTML
             z-index: 1;
         }
 
-        /* Título en Negro Elegante */
         h1 { 
             font-size: 1.6rem; 
             color: #111827; 
@@ -45,7 +41,6 @@ HTML
             letter-spacing: -0.3px;
         }
 
-        /* Subtítulo en Gris Oscuro */
         p.subtitle { 
             font-size: 0.9rem; 
             color: #374151; 
@@ -63,7 +58,6 @@ HTML
             margin: 0 auto;
         }
 
-        /* Tarjetas estilo cristal con borde verde */
         .slot {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(8px);
@@ -113,7 +107,6 @@ HTML
 
         .file-input { display: none; }
         
-        /* Botones en blanco con texto oscuro */
         .btn-upload {
             background: #ffffff;
             color: #111827;
@@ -128,7 +121,6 @@ HTML
             transition: all 0.3s ease;
         }
 
-        /* Botón al cargar foto: Verde esmeralda vivo */
         .btn-upload.loaded { 
             background: linear-gradient(135deg, #2e8b60 0%, #1e6343 100%);
             color: #ffffff;
@@ -139,11 +131,11 @@ HTML
 </head>
 <body>
 
-    <!-- Ilustraciones decorativas funcionalmente comprobadas -->
+    <!-- Enlaces directos a CDN sin bloqueos -->
     <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG1.png" class="decor-bg decor-snoopy-1" alt="Snoopy">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-1" alt="Gumball">
+    <img src="https://raw.githubusercontent.com/tobi512/Gumball/main/gumball.png" class="decor-bg decor-gumball-1" alt="Gumball" onerror="this.src='https://cdn-icons-png.flaticon.com/512/742/742751.png'">
     <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG25.png" class="decor-bg decor-snoopy-2" alt="Snoopy">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-2" alt="Gumball">
+    <img src="https://raw.githubusercontent.com/tobi512/Gumball/main/gumball.png" class="decor-bg decor-gumball-2" alt="Gumball" onerror="this.src='https://cdn-icons-png.flaticon.com/512/742/742751.png'">
 
     <div class="content-wrapper">
         <h1>Nuestro reto de fotos, Renato y Martina :D</h1>
@@ -153,7 +145,6 @@ HTML
     </div>
 
     <script>
-        // LISTA SIN EMOJIS
         const retos = [
             "Foto en la playa",
             "Comiendo hamburguesas",

@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,15 +8,35 @@ HTML
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         
         body { 
-            /* Fondo degradado suave: De rojo burdeos/rosa muy claro a un toque salvia/verde suave */
-            background: linear-gradient(135deg, #fff2f2 0%, #f4f8f5 100%);
-            color: #383838; 
+            /* Fondo con degradado donde el verde predomina mucho más */
+            background: linear-gradient(135deg, #e8f3ed 0%, #cce5d7 50%, #f9ecee 100%);
+            color: #2e3d36; 
             padding: 25px 15px; 
             text-align: center;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Título en Rojo Granate/Vino (Elegante y no chillón) */
+        /* Imágenes flotantes transparentes de Snoopy y Gumball de fondo */
+        .decor-bg {
+            position: fixed;
+            opacity: 0.18;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+        }
+        .decor-snoopy-1 { top: 3%; left: -20px; width: 110px; }
+        .decor-gumball-1 { top: 22%; right: -15px; width: 100px; }
+        .decor-snoopy-2 { bottom: 25%; left: -15px; width: 100px; }
+        .decor-gumball-2 { bottom: 4%; right: -10px; width: 110px; }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título en rojo carmesí elegante (Tú) */
         h1 { 
             font-size: 1.7rem; 
             color: #b83b49; 
@@ -26,13 +45,14 @@ HTML
             letter-spacing: -0.3px;
         }
 
-        /* Subtítulo suave */
+        /* Subtítulo actualizado */
         p.subtitle { 
             font-size: 0.9rem; 
-            color: #6b7280; 
+            color: #3b5247; 
             margin-bottom: 25px; 
             line-height: 1.4;
             padding: 0 10px;
+            font-weight: 500;
         }
         
         .grid-container {
@@ -43,11 +63,11 @@ HTML
             margin: 0 auto;
         }
 
-        /* Tarjetas estilo cristal con borde rojo pastel muy suave */
+        /* Tarjetas con bordes punteados en tono verde suave */
         .slot {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(8px);
-            border: 1.5px dashed #f3c1c6;
+            border: 1.5px dashed #8ebdaa;
             border-radius: 16px;
             padding: 12px;
             display: flex;
@@ -55,14 +75,14 @@ HTML
             align-items: center;
             justify-content: space-between;
             min-height: 200px;
-            box-shadow: 0 8px 18px rgba(184, 59, 73, 0.05);
+            box-shadow: 0 8px 18px rgba(43, 84, 66, 0.08);
             transition: all 0.3s ease;
         }
 
         .slot-title { 
             font-size: 0.85rem; 
             font-weight: 600; 
-            color: #4a5568;
+            color: #2a3d34;
             margin-bottom: 8px;
             line-height: 1.3;
         }
@@ -70,7 +90,7 @@ HTML
         .preview-container {
             width: 100%;
             height: 110px;
-            background-color: #faf5f5;
+            background-color: #f0f7f3;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -93,7 +113,7 @@ HTML
 
         .file-input { display: none; }
         
-        /* Botón Inicial: Rojo cálido/elegante */
+        /* Botón Inicial: Rojo cálido elegante */
         .btn-upload {
             background: linear-gradient(135deg, #d64554 0%, #b83b49 100%);
             color: white;
@@ -108,22 +128,29 @@ HTML
             transition: all 0.3s ease;
         }
 
-        /* Botón al cargar foto: Verde esmeralda/salvia suave por los ojos de ella */
+        /* Botón al cargar foto: Verde esmeralda vivo (Sus ojos) */
         .btn-upload.loaded { 
-            background: linear-gradient(135deg, #489379 0%, #35725e 100%);
-            box-shadow: 0 4px 10px rgba(53, 114, 94, 0.25);
+            background: linear-gradient(135deg, #2e8b60 0%, #1e6343 100%);
+            box-shadow: 0 4px 10px rgba(30, 99, 67, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <h1>Nuestro reto de fotos, Renato y Martina :D</h1>
-    <p class="subtitle">Pendientes por llenar juntos..., sin presiones, lento, sin apurar las cosas....</p>
+    <!-- Ilustraciones decorativas de fondo -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/22/Snoopy_Peanuts.png" class="decor-bg decor-snoopy-1" alt="Snoopy">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-1" alt="Gumball">
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/22/Snoopy_Peanuts.png" class="decor-bg decor-snoopy-2" alt="Snoopy">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Gumball_Watterson.png" class="decor-bg decor-gumball-2" alt="Gumball">
 
-    <div class="grid-container" id="grid"></div>
+    <div class="content-wrapper">
+        <h1>Nuestro reto de fotos, Renato y Martina :D</h1>
+        <p class="subtitle">Sin presión, deberíamos salir a rellenar todas estas fotos...</p>
+
+        <div class="grid-container" id="grid"></div>
+    </div>
 
     <script>
-        // TUS 13 OPCIONES INTACATAS
         const retos = [
             "Foto en la playa 🏖️",
             "Comiendo hamburgesas 🍔",
